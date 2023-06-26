@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/icss/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function(){
+        let redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <title>iCSS 案例</title>
     <script type="module" crossorigin src="/icss/assets/index.7f7656d1.js"></script>
-    <link rel="stylesheet" href="/icss/assets/index.4c9ff54e.css">
+    <link rel="stylesheet" href="/icss/assets/index.e29b2611.css">
   </head>
   <body>
     <div id="app"></div>
