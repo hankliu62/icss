@@ -1,7 +1,8 @@
 {
   "name": "icss",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "homepage": "https://hankliu62.github.io/icss/",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
