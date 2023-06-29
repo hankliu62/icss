@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import { getRoutePrefix } from '@/utils/route'
 
 import Home from '../views/Home/index.vue'
 
@@ -37,59 +38,59 @@ const router = createRouter({
   history: routerHistory,
   routes: [
     {
-      path: `${process.env.ROUTE_PREFIX}/`,
+      path: `${getRoutePrefix()}/`,
       component: Home
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/bubble-effect`, // 超酷炫的气泡效果
+      path: `${getRoutePrefix()}/bubble-effect`, // 超酷炫的气泡效果
       component: BubbleEffect
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/water-ripple`, // 波浪效果
+      path: `${getRoutePrefix()}/water-ripple`, // 波浪效果
       component: WaterRipple
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/charge`, // 充电效果
+      path: `${getRoutePrefix()}/charge`, // 充电效果
       component: Charge
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/rotating-ellipse`, // 椭圆环绕效果
+      path: `${getRoutePrefix()}/rotating-ellipse`, // 椭圆环绕效果
       component: RotatingEllipse
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/photo-frame`, // 3D相册效果
+      path: `${getRoutePrefix()}/photo-frame`, // 3D相册效果
       component: PhotoFrame
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/intelligent-discolour`, // 智能变色效果
+      path: `${getRoutePrefix()}/intelligent-discolour`, // 智能变色效果
       component: IntelligentDiscolour
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/border-animation`, // 边框动画效果
+      path: `${getRoutePrefix()}/border-animation`, // 边框动画效果
       component: BorderAnimation
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/linear-mask`, // 渐变遮罩效果
+      path: `${getRoutePrefix()}/linear-mask`, // 渐变遮罩效果
       component: LinearMask
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/image-mask`, // 图片融合效果
+      path: `${getRoutePrefix()}/image-mask`, // 图片融合效果
       component: ImageMask
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/scroll-header-shadow`, // 滚动头部阴影效果
+      path: `${getRoutePrefix()}/scroll-header-shadow`, // 滚动头部阴影效果
       component: ScrollHeaderShadow
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/loading-shuttle-ball`, // 小球穿梭Loading效果
+      path: `${getRoutePrefix()}/loading-shuttle-ball`, // 小球穿梭Loading效果
       component: LoadingShuttleBall
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/loading-dot`, // 打点Loading效果
+      path: `${getRoutePrefix()}/loading-dot`, // 打点Loading效果
       component: LoadingDot
     },
     {
-      path: `${process.env.ROUTE_PREFIX}/loading-rotate-arc`, // 弧线旋转Loading效果
+      path: `${getRoutePrefix()}/loading-rotate-arc`, // 弧线旋转Loading效果
       component: LoadingRotateArc
     }
   ]

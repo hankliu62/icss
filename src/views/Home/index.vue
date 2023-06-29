@@ -9,7 +9,8 @@ import groupBy from 'lodash/groupBy'
 import {
   Loading3QuartersOutlined,
   FireOutlined,
-} from '@ant-design/icons-vue';
+} from '@ant-design/icons-vue'
+import { getRoutePrefix } from '@/utils/route'
 // import JSEncrypt from 'jsencrypt'
 
 defineComponent({
@@ -236,7 +237,7 @@ const onChange = (link: string) => {
                   <div
                     :id="`${route}_${name}`"
                     class="card w-full flex flex-col justify-between flex-1 cursor-pointer transition-all min-h-[325px]"
-                    @click="router.push(`/${route}`)"
+                    @click="router.push(`${getRoutePrefix()} + /${route}`)"
                   >
                     <div
                       class="border rounded-md flex flex-1 justify-center min-h-[130px] max-h-280px object-cover transition-all hover:translate-y-[-4px] hover:border-transparent hover:shadow-[0_6px_16px_rgba(107,147,224,0.2)]"
@@ -244,7 +245,7 @@ const onChange = (link: string) => {
                     >
                       <img
                         v-if="resourceType === 'image'"
-                        :src="resourceUrl"
+                        :src="getRoutePrefix() +  resourceUrl"
                         :alt="name"
                         :preview="false"
                         class="max-w-full max-h-full object-scale-down"
