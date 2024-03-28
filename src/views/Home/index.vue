@@ -248,7 +248,7 @@ const onChange = (link: string) => {
                     >
                       <img
                         v-if="resourceType === 'image'"
-                        :src="getRoutePrefix() +  resourceUrl"
+                        v-lazy="getRoutePrefix() +  resourceUrl"
                         :alt="name"
                         :preview="false"
                         class="max-w-full max-h-full object-scale-down"
