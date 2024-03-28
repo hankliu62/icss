@@ -3,5 +3,6 @@
  * @returns
  */
 export function getRoutePrefix(): string {
+  // @ts-ignore
   return process.env.ROUTE_PREFIX || "";
 }

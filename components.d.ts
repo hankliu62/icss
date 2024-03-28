@@ -7,7 +7,6 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AAnchor: typeof import('ant-design-vue/es')['Anchor']
     AAnchorLink: typeof import('ant-design-vue/es')['AnchorLink']
-    ACheckableTag: typeof import('ant-design-vue/es')['CheckableTag']
     ACol: typeof import('ant-design-vue/es')['Col']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
