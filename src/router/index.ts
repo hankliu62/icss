@@ -1,34 +1,34 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { getRoutePrefix } from '@/utils/route'
 
-import Home from '../views/Home/index.vue'
+const Home = () => import('../views/Home/index.vue')
 
 // 超酷炫的气泡效果
-import BubbleEffect from '../views/BubbleEffect/index.vue'
+const BubbleEffect = () => import('../views/BubbleEffect/page.vue')
 // 波浪效果
-import WaterRipple from '../views/WaterRipple/index.vue'
+const WaterRipple = () => import('../views/WaterRipple/page.vue')
 // 充电效果
-import Charge from '../views/Charge/index.vue'
+const Charge = () => import('../views/Charge/page.vue')
 // 椭圆环绕效果
-import RotatingEllipse from '../views/RotatingEllipse/index.vue'
+const RotatingEllipse = () => import('../views/RotatingEllipse/page.vue')
 // 3D相册效果
-import PhotoFrame from '../views/PhotoFrame/index.vue'
+const PhotoFrame = () => import('../views/PhotoFrame/page.vue')
 // 智能变色效果
-import IntelligentDiscolour from '../views/IntelligentDiscolour/index.vue'
+const IntelligentDiscolour = () => import('../views/IntelligentDiscolour/page.vue')
 // 边框动画效果
-import BorderAnimation from '../views/BorderAnimation/index.vue'
+const BorderAnimation = () => import('../views/BorderAnimation/page.vue')
 // 渐变遮罩效果
-import LinearMask from '../views/LinearMask/index.vue'
+const LinearMask = () => import('../views/LinearMask/page.vue')
 // 图片融合效果
-import ImageMask from '../views/ImageMask/index.vue'
+const ImageMask = () => import('../views/ImageMask/page.vue')
 // 滚动头部阴影效果
-import ScrollHeaderShadow from '../views/ScrollHeaderShadow/index.vue'
+const ScrollHeaderShadow = () => import('../views/ScrollHeaderShadow/page.vue')
 // 小球穿梭Loading效果
-import LoadingShuttleBall from '../views/LoadingShuttleBall/index.vue'
+const LoadingShuttleBall = () => import('../views/LoadingShuttleBall/page.vue')
 // 打点Loading效果
-import LoadingDot from '../views/LoadingDot/index.vue'
+const LoadingDot = () => import('../views/LoadingDot/page.vue')
 // 弧线旋转Loading效果
-import LoadingRotateArc from '../views/LoadingRotateArc/index.vue'
+const LoadingRotateArc = () => import('../views/LoadingRotateArc/page.vue')
 
 const routerHistory = createWebHistory()
 // createWebHashHistory hash 路由

@@ -2,14 +2,116 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+// vs code 编辑器配置
+import MonacoEditorPlugin from 'vite-plugin-monaco-editor'
+import MarkdownPlugin, { Mode } from 'vite-plugin-markdown'
+
 const path = require('path')
+
+const Languages = [
+  "editorWorkerService",
+  "plaintext",
+  "sql",
+  "json",
+  "markdown",
+  "css",
+  "typescript",
+  "javascript",
+  "html",
+  "graphql",
+  "python",
+  "scss",
+  "yaml",
+  "abap",
+  "apex",
+  "azcli",
+  "bat",
+  "bicep",
+  "cameligo",
+  "clojure",
+  "coffeescript",
+  "c",
+  "cpp",
+  "csharp",
+  "csp",
+  "cypher",
+  "dart",
+  "dockerfile",
+  "ecl",
+  "elixir",
+  "flow9",
+  "fsharp",
+  "freemarker2",
+  "freemarker2.tag-angle.interpolation-dollar",
+  "freemarker2.tag-bracket.interpolation-dollar",
+  "freemarker2.tag-angle.interpolation-bracket",
+  "freemarker2.tag-bracket.interpolation-bracket",
+  "freemarker2.tag-auto.interpolation-dollar",
+  "freemarker2.tag-auto.interpolation-bracket",
+  "go",
+  "handlebars",
+  "hcl",
+  "ini",
+  "java",
+  "julia",
+  "kotlin",
+  "less",
+  "lexon",
+  "lua",
+  "liquid",
+  "m3",
+  "mips",
+  "msdax",
+  "mysql",
+  "objective-c",
+  "pascal",
+  "pascaligo",
+  "perl",
+  "pgsql",
+  "php",
+  "pla",
+  "postiats",
+  "powerquery",
+  "powershell",
+  "proto",
+  "pug",
+  "qsharp",
+  "r",
+  "razor",
+  "redis",
+  "redshift",
+  "restructuredtext",
+  "ruby",
+  "rust",
+  "sb",
+  "scala",
+  "scheme",
+  "shell",
+  "sol",
+  "aes",
+  "sparql",
+  "st",
+  "swift",
+  "systemverilog",
+  "verilog",
+  "tcl",
+  "twig",
+  "vb",
+  "xml",
+];
 
 const config: any = {
   plugins: [
     Components({
       resolvers: [AntDesignVueResolver()]
     }),
-    vue()
+    vue(),
+    MonacoEditorPlugin({
+      languageWorkers: ['editorWorkerService', 'typescript', 'json', 'html', 'css']
+    }),
+    MarkdownPlugin({
+      mode: [Mode.VUE, Mode.HTML],
+    })
   ],
   define: {
     "process.env": {

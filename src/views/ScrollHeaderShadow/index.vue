@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 /**
  * 滚动头部阴影效果

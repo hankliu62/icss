@@ -11,7 +11,10 @@ import {
   FireOutlined,
 } from '@ant-design/icons-vue'
 import { getRoutePrefix } from '@/utils/route'
+import useTopWindow from '@/hooks/useTopWindow'
 // import JSEncrypt from 'jsencrypt'
+
+const isTop = useTopWindow()
 
 defineComponent({
   components: {
@@ -206,7 +209,7 @@ const onChange = (link: string) => {
       </a-anchor>
     </a-layout-sider>
     <a-layout>
-      <a-layout-header class="!bg-white !p-0 text-left">
+      <a-layout-header v-if="isTop" class="!bg-white !p-0 text-left">
         <menu-unfold-outlined
           v-if="collapsed"
           class="trigger text-18px pl-24px pr-24px !hidden"

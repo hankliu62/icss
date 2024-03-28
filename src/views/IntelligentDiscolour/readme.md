@@ -1,8 +1,8 @@
-## 智能变色效果
+# 智能变色效果
 
-### 技术总结
+## 技术总结
 
-#### 混合模式 mix-blend-mode: difference
+### 混合模式 mix-blend-mode: difference
 
 CSS3 新增了一个很有意思的属性 --mix-blend-mode ，其中 mix 和 blend 的中文意译均为混合，那么这个属性的作用直译过来就是混合混合模式，当然，我们我们通常称之为混合模式。一共有下图所示的一些混合模式：
 
@@ -41,3 +41,39 @@ CSS3 新增了一个很有意思的属性 --mix-blend-mode ，其中 mix 和 ble
 与白色混合将使底色反相；与黑色混合则不产生变化。
 
 通俗一点就是上方图层的亮区将下方图层的颜色进行反相，暗区则将颜色正常显示出来，效果与原图像是完全相反的颜色。
+
+## 代码片段
+``` vue
+<script setup lang="ts">
+/**
+ * 利用混合模式，让文字智能适配背景颜色
+ *
+ * https://github.com/chokcoco/iCSS/issues/169
+ */
+</script>
+
+<template>
+  <div class="container w-full h-full max-w-full flex flex-col">
+    <div class="demo1 flex-1 min-h-520px relative bg-br-black-white-split">
+      <div
+        class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-[120px] mix-blend-difference text-white animate-[horizontal-bounce_3s_ease-in-out_infinite_alternate] whitespace-nowrap select-none"
+      >
+        LOREM IPSUM
+      </div>
+    </div>
+
+    <div class="demo2 flex-1 min-h-620px relative bg-b-black-white-split">
+      <div
+        class="absolute top-[50%] right-[20%] -translate-y-1/2 text-[30px] mix-blend-difference text-white animate-[vertical-bounce_3s_ease-in-out_infinite_alternate] whitespace-nowrap select-none"
+        :style="{'writing-mode': 'vertical-rl'}"
+      >
+        下拉展示更多→
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+
+</style>
+```

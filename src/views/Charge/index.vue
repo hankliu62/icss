@@ -28,7 +28,7 @@ const count = ref<number>(15)
       </div>
     </div>
 
-    <iframe src="https://player.xinpianchang.com/?aid=11924786&amp;mid=60VAm7OGm1E7DRnW&amp;appKey=61a2f329348b3bf77&amp;apiBackend=https://mod-api.xinpianchang.com&amp;passportUrl=https://passport.xinpianchang.com&amp;logBackend=https://log.xpccdn.com" allowfullscreen="true" style="border: none;"></iframe>
+    <iframe src="https://player.xinpianchang.com/?aid=11924786&amp;mid=60VAm7OGm1E7DRnW&amp;appKey=61a2f329348b3bf77&amp;apiBackend=https://mod-api.xinpianchang.com&amp;passportUrl=https://passport.xinpianchang.com&amp;logBackend=https://log.xpccdn.com" height="500" allowfullscreen="true" style="border: none;"></iframe>
   </div>
 </template>
 
@@ -111,6 +111,7 @@ const count = ref<number>(15)
       line-height: 1;
       color: #fff;
       z-index: 10;
+      text-align: center;
     }
 
     .contrast {

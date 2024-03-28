@@ -11,7 +11,7 @@ const count = ref<number>(200)
 </script>
 
 <template>
-  <div class="container w-full h-full max-w-full">
+  <div class="container w-full h-full max-w-full overflow-hidden">
     <div class="bubbles">
       <div v-for="i in count" :key="i" class="bubble" />
     </div>

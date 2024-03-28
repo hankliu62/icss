@@ -1,3 +1,11 @@
+# 打点Loading效果
+
+## 技术总结
+
+...
+
+## 代码片段
+``` vue
 <script setup lang="ts">
 /**
  * 打点Loading效果
@@ -43,3 +51,4 @@
   }
 }
 </style>
+```
